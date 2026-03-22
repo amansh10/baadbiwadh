@@ -1,0 +1,311 @@
+[
+  {
+    "ic": "land",
+    "tag": null,
+    "h": "THE MOST EXPENSIVE\nLAND IN NEPAL COSTS\nMORE THAN MANHATTAN.",
+    "type": "std",
+    "b": [
+      {"t": "DURBAR MARG: ", "r": 0},
+      {"t": "$22,000 PER SQUARE METRE.", "r": 1},
+      {"t": " ONE OF THE TOP 10 MOST EXPENSIVE IN THE WORLD.\n\nAVERAGE NEPALI CIVIL SERVANT SALARY: NPR 36,000/MONTH.\nYEARS OF THAT SALARY TO BUY A SMALL LALITPUR PLOT: ", "r": 0},
+      {"t": "37 YEARS.", "r": 1}
+    ]
+  },
+  {
+    "ic": null,
+    "tag": "THE CRISIS IN FOUR NUMBERS",
+    "h": "LAND APPRECIATES\n4X FASTER THAN\nYOUR SALARY.",
+    "type": "stats",
+    "stats": [
+      {"num": "27.7%", "lbl": "ANNUAL LAND PRICE\nRISE \u2014 KTM VALLEY", "a": 1},
+      {"num": "7.45%", "lbl": "ANNUAL SALARY\nGROWTH \u2014 NEPAL", "a": 0},
+      {"num": "37 YRS", "lbl": "FULL SALARY NEEDED\nTO BUY ONE PLOT", "a": 1},
+      {"num": "7,000%", "lbl": "BHAKTAPUR PLOT\nRISE IN 20 YEARS", "a": 0}
+    ],
+    "foot": [
+      {"t": "LAND DOUBLES EVERY 3.5 YEARS. ", "r": 0},
+      {"t": "A NEPALI WORKER'S SALARY WILL NEVER CATCH UP UNDER THIS SYSTEM.", "r": 1}
+    ]
+  },
+  {
+    "ic": "chart",
+    "tag": "LAND APPRECIATION BY LOCATION",
+    "h": "WHERE YOU BUY\nDETERMINES\nEVERYTHING.",
+    "type": "hbar",
+    "chartTitle": "PRICE APPRECIATION \u2014 SELECTED AREAS",
+    "bars": [
+      {"label": "BHAKTAPUR PLOT", "val": "7,000%", "pct": 100, "highlight": true},
+      {"label": "4KM FROM RING RD", "val": "5X IN 5 YRS", "pct": 72, "highlight": true},
+      {"label": "KHOKANA/BUNGAMATI", "val": "FAST TRACK SURGE", "pct": 55, "highlight": false},
+      {"label": "RING ROAD AREA", "val": "NPR 38\u201357L/AANA", "pct": 42, "highlight": false},
+      {"label": "DURBAR MARG (GOVT)", "val": "NPR 72.6L/AANA", "pct": 32, "highlight": false}
+    ],
+    "note": "ACTUAL MARKET RATES SIGNIFICANTLY HIGHER THAN GOVT VALUATION"
+  },
+  {
+    "ic": "people",
+    "tag": null,
+    "h": "\"EVEN IF I SELL MY\nANCESTRAL PROPERTY,\nI CANNOT BUY LAND\nIN KATHMANDU.\"",
+    "type": "std",
+    "b": [
+      {"t": "\u2014 BABURAM PANDEY, SECTION OFFICER, ", "r": 0},
+      {"t": "MINISTRY OF LAND REFORMS.\n\n", "r": 1},
+      {"t": "HE EARNS NPR 36,000/MONTH. THE MINISTRY RESPONSIBLE FOR FIXING THE LAND PROBLEM CANNOT AFFORD TO LIVE IN THE CITY IT GOVERNS.", "r": 0}
+    ]
+  },
+  {
+    "ic": "warning",
+    "tag": "HOW THE BUBBLE WAS BUILT",
+    "h": "5 FORCES THAT\nBUILT THE BUBBLE.",
+    "type": "step",
+    "steps": [
+      [
+        {"t": "POST-1990 URBANISATION: ", "r": 0},
+        {"t": "1/3 OF NEPALIS MOVED FROM BIRTHPLACE. BAGMATI PROVINCE: 47.3% RECENT ARRIVALS. VALLEY CAN'T EXPAND GEOGRAPHICALLY.", "r": 0}
+      ],
+      [
+        {"t": "BANKING LIBERALISATION: ", "r": 0},
+        {"t": "LAND = PRIMARY COLLATERAL. PRICES RISE \u2192 BORROW MORE \u2192 BUY MORE LAND \u2192 PRICES RISE FURTHER.", "r": 1}
+      ],
+      [
+        {"t": "REMITTANCES: ", "r": 0},
+        {"t": "NPR 1.17 TRILLION/YEAR (22% OF GDP). NO PRODUCTIVE INVESTMENT IN NEPAL EXCEPT LAND AT 27.7% RETURN.", "r": 0}
+      ],
+      [
+        {"t": "INFRASTRUCTURE INSIDER INFO: ", "r": 0},
+        {"t": "POLITICIANS BUY LAND IN PROJECT ZONES BEFORE ANNOUNCEMENTS. NIJGADH: INDUSTRIALISTS BOUGHT 50 BIGHAS IN ANTICIPATION.", "r": 1}
+      ],
+      [
+        {"t": "THE REGULATORS ARE THE SPECULATORS.", "r": 1}
+      ]
+    ]
+  },
+  {
+    "ic": "chain",
+    "tag": "FORCE 2 \u2014 THE LOOP NOBODY BROKE",
+    "h": "THE BANK-LAND\nFEEDBACK LOOP.",
+    "type": "std",
+    "b": [
+      {"t": "LAND RISES \u2192 BORROW MORE \u2192 BUY MORE LAND \u2192 LAND RISES HIGHER \u2192\n\n", "r": 0},
+      {"t": "NRB'S OWN ECONOMIST STATED EXPLICITLY:\n\"NRB SHOULD IMMEDIATELY STOP ALLOWING BORROWERS TO USE LAND AS COLLATERAL TO BUY MORE LAND.\"\n\n", "r": 1},
+      {"t": "NRB NEVER DID IT. WE'LL EXPLAIN WHY.", "r": 0}
+    ]
+  },
+  {
+    "ic": "eye",
+    "tag": "THE CONFLICT OF INTEREST \u2014 NAMED",
+    "h": "THE PEOPLE WHO\nCOULD STOP IT\nBENEFIT FROM IT.",
+    "type": "std",
+    "b": [
+      {"t": "FINANCE MINISTER RAM SHARAN MAHAT (HELD PORTFOLIO 6 TIMES): ", "r": 0},
+      {"t": "BUNGALOW, FLAT, PLOTS IN BUDHANILKANTHA, CHAPALI & DHAPASI, 12 ROPANI IN KAVRE, 3 ROPANI IN NUWAKOT.\n\n", "r": 1},
+      {"t": "NRB GOVERNOR MAHA PRASAD ADHIKARI (REGULATES LAND-BACKED LENDING): ", "r": 0},
+      {"t": "HOUSE IN LALITPUR, 12 ROPANI IN CHHAMPI & SAINBU, 3 BIGHA IN JHAPA.\n\n", "r": 1},
+      {"t": "THESE ARE THEIR OWN PUBLICLY DISCLOSED FIGURES. NOT ALLEGATIONS.", "r": 0}
+    ]
+  },
+  {
+    "ic": "money",
+    "tag": "CONSEQUENCE 1",
+    "h": "CAPITAL LOCKED\nIN DIRT.\nNOT IN FACTORIES.",
+    "type": "std",
+    "b": [
+      {"t": "RETURN ON SPECULATIVE LAND: ", "r": 0},
+      {"t": "27.7% ANNUALLY.\n", "r": 1},
+      {"t": "RETURN ON A SMALL GARMENT FACTORY: 12\u201315% WITH FAR MORE RISK.\n\n", "r": 0},
+      {"t": "A RATIONAL INVESTOR PICKS LAND EVERY TIME.\n\nRESULT: NEPAL'S FDI IS 0.3\u20130.5% OF GDP \u2014 ONE OF SOUTH ASIA'S LOWEST. THE WORKERS WHO SHOULD BE IN FACTORIES ARE IN QATAR.", "r": 1}
+    ]
+  },
+  {
+    "ic": "plant",
+    "tag": "CONSEQUENCE 2",
+    "h": "NEPAL IS EATING\nITS OWN FARMLAND.",
+    "type": "std",
+    "b": [
+      {"t": "NEPAL IMPORTS RICE AND VEGETABLES FROM INDIA \u2014 DESPITE ", "r": 0},
+      {"t": "60% OF ITS POPULATION FARMING.\n\n", "r": 1},
+      {"t": "A FARMER AT THE EDGE OF POKHARA CAN SELL THEIR PLOT FOR ", "r": 0},
+      {"t": "NPR 5 MILLION \u2014 FIVE YEARS OF FARMING INCOME \u2014 IN ONE DAY.\n\n", "r": 1},
+      {"t": "CBS CENSUS DATA CONFIRMS URBAN LAND COVERAGE EXPANDING INTO AGRICULTURAL AREAS AROUND ALL MAJOR CITIES.", "r": 0}
+    ]
+  },
+  {
+    "ic": null,
+    "tag": "CONSEQUENCE 3 \u2014 THE MATH",
+    "h": "THE HOUSING\nMATHEMATICS THAT\nHAS NO SOLUTION.",
+    "type": "compare",
+    "cols": [
+      {
+        "label": "WHAT YOU EARN",
+        "pill": "red",
+        "body": [
+          {"t": "CIVIL SERVANT:\nNPR 36,000\u201350,000/MONTH\n\nBANK REQUIRES NPR 100,000+\nTO QUALIFY FOR HOME LOAN\n\nMOST BANKS REFUSE THIS\nINCOME BRACKET", "r": 0}
+        ]
+      },
+      {
+        "label": "WHAT IT COSTS",
+        "pill": "grn",
+        "body": [
+          {"t": "SMALL LALITPUR PLOT:\n", "r": 0},
+          {"t": "NPR 16 MILLION\n\n", "r": 1},
+          {"t": "2-BEDROOM HATIBAN FLAT:\n", "r": 0},
+          {"t": "NPR 8.5 MILLION", "r": 1}
+        ]
+      }
+    ],
+    "foot": [
+      {"t": "URBAN HOUSEHOLDS: 18.7% OF INCOME ON RENT ALONE (CBS). UN MAX STANDARD: 30% INCLUDING MORTGAGE. ", "r": 0},
+      {"t": "MOST NEPALIS WILL RENT FOREVER.", "r": 1}
+    ]
+  },
+  {
+    "ic": "globe",
+    "tag": "HOW BAD IS IT? GLOBAL COMPARISON",
+    "h": "KATHMANDU'S\nPRICE-TO-INCOME\nRATIO VS THE WORLD.",
+    "type": "hbar",
+    "chartTitle": "YEARS OF MEDIAN INCOME TO BUY A MEDIAN HOME",
+    "bars": [
+      {"label": "KATHMANDU (EST.)", "val": "35\u201340+ YRS", "pct": 100, "highlight": true},
+      {"label": "HONG KONG", "val": "18.8 YRS", "pct": 47, "highlight": false},
+      {"label": "VANCOUVER", "val": "13.0 YRS", "pct": 33, "highlight": false},
+      {"label": "SYDNEY", "val": "11.8 YRS", "pct": 30, "highlight": false},
+      {"label": "LONDON", "val": "8.9 YRS", "pct": 22, "highlight": false},
+      {"label": "SINGAPORE", "val": "4.8 YRS", "pct": 12, "highlight": false}
+    ],
+    "note": "ABOVE 5.1 = \"SEVERELY UNAFFORDABLE\" GLOBALLY. KATHMANDU IS OFF THE CHART."
+  },
+  {
+    "ic": "bank",
+    "tag": "CONSEQUENCE 4",
+    "h": "NEPAL'S ENTIRE\nBANKING SECTOR\nIS ONE LAND BET.",
+    "type": "std",
+    "b": [
+      {"t": "EVERY BUSINESS LOAN, HOME LOAN, AND PROJECT LOAN IS SECURED BY LAND.\n\n", "r": 0},
+      {"t": "IF LAND PRICES FALL \u2014 AS ALL BUBBLES DO \u2014 THE COLLATERAL BACKING NEPAL'S ENTIRE LOAN PORTFOLIO FALLS SIMULTANEOUSLY.\n\n", "r": 1},
+      {"t": "NPL RATIO ALREADY RISING IN 2024\u201325 DUE TO REAL ESTATE SECTOR SLOWDOWN. NEPAL HAS NO BANK RESOLUTION FRAMEWORK PREPARED FOR THIS SCENARIO.", "r": 0}
+    ]
+  },
+  {
+    "ic": "warning",
+    "tag": "CONSEQUENCE 5",
+    "h": "THE WEALTHIEST\nPAY ALMOST ZERO\nCAPITAL GAINS TAX.",
+    "type": "std",
+    "b": [
+      {"t": "BOUGHT 20 YEARS AGO: NPR 1 MILLION. SOLD TODAY: ", "r": 0},
+      {"t": "NPR 70 MILLION.\n", "r": 1},
+      {"t": "CAPITAL GAINS TAX: 5%. BUT CALCULATED ON THE ", "r": 0},
+      {"t": "DECLARED VALUE \u2014 OFTEN 30\u201350% OF ACTUAL PRICE.\n\n", "r": 1},
+      {"t": "BOTH BUYER AND SELLER UNDERSTATE THE TRANSACTION TO CUT TAXES. NEPAL'S MOST UNDERTAXED INCOME. OVERWHELMINGLY BENEFITS THE WEALTHIEST LANDOWNERS.", "r": 0}
+    ]
+  },
+  {
+    "ic": "warning",
+    "tag": "CONSEQUENCE 6",
+    "h": "NEPAL IS ON THE\nFATF GREY LIST.\nREAL ESTATE IS WHY.",
+    "type": "std",
+    "b": [
+      {"t": "FATF GREY-LISTED NEPAL IN FEBRUARY 2025 \u2014 CITING INADEQUATE AML FRAMEWORKS.\n\n", "r": 0},
+      {"t": "THE MECHANISM: CHEQUE FOR DECLARED AMOUNT (TRACEABLE). CASH FOR THE PREMIUM (UNTRACEABLE). ", "r": 0},
+      {"t": "LAND BECOMES FORMAL. BLACK MONEY IS GONE.\n\n", "r": 1},
+      {"t": "THE REAL ESTATE BUBBLE IS SIMULTANEOUSLY THE ECONOMIC DISTORTION AND THE LAUNDERING MECHANISM.", "r": 0}
+    ]
+  },
+  {
+    "ic": "globe",
+    "tag": "COUNTRIES THAT FIXED IT",
+    "h": "SINGAPORE:\n78% OF CITIZENS\nIN GOVT HOUSING.",
+    "type": "std",
+    "b": [
+      {"t": "HDB ESTABLISHED 1960. TODAY, ", "r": 0},
+      {"t": "78\u201380% OF SINGAPOREANS LIVE IN GOVERNMENT-BUILT FLATS", "r": 1},
+      {"t": " SOLD AT PRICES PEGGED TO MEDIAN INCOME.\n\nSOUTH KOREA 2005: PROGRESSIVE ANNUAL TAX ON HIGH-VALUE PROPERTY \u2014 PASSIVE LAND-HOLDING BECOMES EXPENSIVE.\n\nTAIWAN: TAXES THE ANNUAL LAND VALUE INCREMENT \u2014 A DIRECT TAX ON UNREALISED APPRECIATION.", "r": 0}
+    ]
+  },
+  {
+    "ic": "chart",
+    "tag": "WHERE NEPAL'S MONEY COMES FROM",
+    "h": "22% OF NEPAL'S GDP\nIS SENT BY WORKERS\nIN FOREIGN COUNTRIES.",
+    "type": "donut",
+    "pct": 22,
+    "centerLabel": "OF GDP",
+    "legend": [
+      {"color": "#b71c1c", "text": "NPR 1.17 TRILLION IN REMITTANCES \u2014 FY2024-25", "r": true},
+      {"color": "#c8bfb0", "text": "87% OF MIGRANT WORKERS ARE MALE", "r": false},
+      {"color": "#d8cfc3", "text": "~2 MILLION NEPALI MEN WORKING ABROAD", "r": false},
+      {"color": "#e8e0d4", "text": "THEIR FAMILIES RUN HOUSEHOLDS WITHOUT LEGAL PROPERTY RIGHTS", "r": false}
+    ],
+    "foot": [
+      {"t": "MOST REMITTANCE INCOME FLOWS INTO LAND \u2014 THE ONLY INVESTMENT RETURNING 27.7% ANNUALLY.", "r": 1}
+    ]
+  },
+  {
+    "ic": "check",
+    "tag": "WHAT RSP MUST DO",
+    "h": "FIVE REFORMS.\nALL WITHIN EXISTING\nLEGAL AUTHORITY.",
+    "type": "step",
+    "steps": [
+      [
+        {"t": "PROGRESSIVE ANNUAL LAND TAX \u2014 ", "r": 0},
+        {"t": "0.5% OF MARKET VALUE/YEAR ABOVE 1 ROPANI. HOLDING LAND MUST COST MONEY. PRECEDENT: SOUTH KOREA JONGBU-SE 2005.", "r": 1}
+      ],
+      [
+        {"t": "REAL TRANSACTION VALUE LAW \u2014 ", "r": 0},
+        {"t": "REGISTRATION \u226580% OF PUBLISHED MARKET RATE. ENDS CASH PREMIUM SYSTEM. DIRECTLY ADDRESSES FATF GREY LIST.", "r": 0}
+      ],
+      [
+        {"t": "SEVER THE BANK-LAND LOOP \u2014 ", "r": 0},
+        {"t": "NRB CIRCULAR: BAN USING LAND AS COLLATERAL TO BUY MORE LAND. 50% DOWN PAYMENT REQUIRED. NRB ALREADY HAS THIS AUTHORITY.", "r": 0}
+      ],
+      [
+        {"t": "DIGITISE ALL LAND RECORDS \u2014 ", "r": 0},
+        {"t": "PUBLIC PORTAL: ANY CITIZEN SEARCHES OWNERSHIP BY NAME. ENDS BENAMI OWNERSHIP. SUPPORTED BY CONSTITUTION ARTICLE 19.", "r": 0}
+      ],
+      [
+        {"t": "NEPAL HOUSING CORPORATION \u2014 ", "r": 0},
+        {"t": "10,000 AFFORDABLE UNITS/YEAR IN KTM + 5,000 PER PROVINCIAL CAPITAL. CONSTITUTION ARTICLE 35 MANDATES RIGHT TO HOUSING.", "r": 1}
+      ]
+    ]
+  },
+  {
+    "ic": "shield",
+    "tag": "THE FIRST TEST FOR RSP",
+    "h": "THE ASSET\nDISCLOSURES ON DAY 1\nTELL EVERYTHING.",
+    "type": "std",
+    "b": [
+      {"t": "RSP'S SENIOR FIGURES' ASSET DISCLOSURES WILL SHOW WHETHER THEY HOLD THE SAME REAL ESTATE PATTERNS AS PREDECESSORS.\n\n", "r": 0},
+      {"t": "IF THEY DO NOT: LESS PERSONAL INTEREST IN MAINTAINING THE BUBBLE.\n", "r": 0},
+      {"t": "IF THEY DO: THE CONFLICT OF INTEREST REPRODUCES UNDER NEW MANAGEMENT.\n\n", "r": 1},
+      {"t": "THE ASSET DISCLOSURES ARE THE FIRST TEST. EVERYTHING ELSE FOLLOWS.", "r": 0}
+    ]
+  },
+  {
+    "ic": "flame",
+    "tag": "THE HONEST BOTTOM LINE",
+    "h": "THE BUBBLE WILL\nCORRECT. THE ONLY\nQUESTION IS HOW.",
+    "type": "std",
+    "b": [
+      {"t": "GRADUAL: POLICY INTERVENTION THAT SLOWLY DEFLATES THE BUBBLE OVER YEARS.\n\n", "r": 0},
+      {"t": "SUDDEN: A CREDIT EVENT. BANKS STOP LENDING. NPLS SPIKE. PRICES COLLAPSE. NO PREPARED RESPONSE.\n\n", "r": 1},
+      {"t": "EVERY YEAR THE INTERVENTION IS DELAYED MAKES THE EVENTUAL CRISIS WORSE. ALL PROPERTY BUBBLES CORRECT. NONE HAVE DEFIED GRAVITY FOREVER.", "r": 0}
+    ]
+  },
+  {
+    "ic": "people",
+    "tag": null,
+    "h": null,
+    "type": "close",
+    "lines": [
+      {"t": "37 YEARS.", "r": 1},
+      {"gap": true},
+      {"t": "THAT IS HOW MANY YEARS OF A NEPALI", "r": 0},
+      {"t": "CIVIL SERVANT'S SALARY", "r": 0},
+      {"t": "TO BUY ONE SMALL PLOT.", "r": 0},
+      {"gap": true},
+      {"t": "THIS NUMBER TELLS YOU EVERYTHING", "r": 0},
+      {"t": "ABOUT WHO NEPAL'S ECONOMY", "r": 0},
+      {"t": "IS DESIGNED TO SERVE.", "r": 1},
+      {"gap": true},
+      {"t": "AND WHO IT HAS FORGOTTEN.", "r": 1}
+    ]
+  }
+]
