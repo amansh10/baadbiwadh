@@ -291,6 +291,7 @@ let DATA=[];
 let cur=0, editMode=false, moveMode=false, savedRange=null;
 let isDragging=false, dragEl=null, startX=0, startY=0, initialX=0, initialY=0;
 const ICON_KEYS=Object.keys(IC);
+let UNDO_STACK=[], REDO_STACK=[], editSessionSnapshot=null;
 
 /* ══ RENDER ══ */
 function hSize(h){const n=(h||'').replace(/\n/g,'').length;if(n<=6)return'54px';if(n<=12)return'44px';if(n<=20)return'37px';if(n<=30)return'30px';if(n<=44)return'25px';return'21px';}
@@ -315,6 +316,61 @@ function saveSlideState() {
   clone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
   clone.querySelectorAll('*').forEach(el => el.style.cursor = '');
   DATA[cur].customSlideHTML = clone.innerHTML;
+}
+
+function serializeStudioState(){
+  return JSON.stringify({data:DATA,cur});
+}
+
+function updateHistoryButtons(){
+  const undoBtn=document.getElementById('undoBtn');
+  const redoBtn=document.getElementById('redoBtn');
+  if(undoBtn) undoBtn.disabled=UNDO_STACK.length===0;
+  if(redoBtn) redoBtn.disabled=REDO_STACK.length===0;
+}
+
+function pushUndoSnapshot(snapshot){
+  if(!snapshot) return;
+  if(UNDO_STACK.length && UNDO_STACK[UNDO_STACK.length-1]===snapshot) return;
+  UNDO_STACK.push(snapshot);
+  updateHistoryButtons();
+}
+
+function rememberStateForUndo(){
+  pushUndoSnapshot(serializeStudioState());
+  REDO_STACK=[];
+  updateHistoryButtons();
+}
+
+function restoreStudioState(snapshot){
+  if(!snapshot) return;
+  const state=JSON.parse(snapshot);
+  DATA=state.data||[];
+  cur=Math.max(0,Math.min(state.cur||0,Math.max(DATA.length-1,0)));
+  buildThumbs();
+  buildIconPicker();
+  if(DATA.length) render(cur);
+  updateHistoryButtons();
+}
+
+function undoChange(){
+  if(!UNDO_STACK.length) return;
+  if(editMode) toggleEdit();
+  const current=serializeStudioState();
+  const snapshot=UNDO_STACK.pop();
+  REDO_STACK.push(current);
+  restoreStudioState(snapshot);
+  setMsg('Undid last change.','ok');
+}
+
+function redoChange(){
+  if(!REDO_STACK.length) return;
+  if(editMode) toggleEdit();
+  const current=serializeStudioState();
+  const snapshot=REDO_STACK.pop();
+  UNDO_STACK.push(current);
+  restoreStudioState(snapshot);
+  setMsg('Redid change.','ok');
 }
 
 function render(i){
@@ -430,6 +486,7 @@ function toggleEdit(){
     btn.textContent='✓ Done'; btn.classList.add('edit-on');
     toolbar.classList.add('show'); viewer.classList.add('edit-active');
     if(DATA.length) iconPanel.classList.add('show');
+    editSessionSnapshot=serializeStudioState();
     render(cur); /* fresh render to ensure sync */
     
     if(!document.getElementById('btn-move')){
@@ -450,6 +507,14 @@ function toggleEdit(){
     if(mBtn) { mBtn.classList.remove('active'); mBtn.style.background = '#fff8e8'; mBtn.style.color = '#b8860b'; mBtn.style.borderColor = '#d4a830'; }
     
     btn.textContent='✏ Edit'; btn.classList.remove('edit-on');
+    saveSlideState();
+    const completedEditSnapshot=serializeStudioState();
+    if(editSessionSnapshot && completedEditSnapshot!==editSessionSnapshot){
+      pushUndoSnapshot(editSessionSnapshot);
+      REDO_STACK=[];
+      updateHistoryButtons();
+    }
+    editSessionSnapshot=null;
     toolbar.classList.remove('show'); viewer.classList.remove('edit-active');
     iconPanel.classList.remove('show');
     document.querySelectorAll('[contenteditable]').forEach(el=>el.removeAttribute('contenteditable'));
@@ -594,6 +659,7 @@ function syncIconPickerSelection(){
 
 function setSlideIcon(iconKey){
   if(!DATA[cur]) return;
+  rememberStateForUndo();
   const inner=document.getElementById('inner');
   if(!inner) return;
   let iconEl=inner.querySelector('.s-icon');
@@ -620,6 +686,7 @@ function setSlideIcon(iconKey){
 function duplicateCurrent(){
   if(!DATA[cur]) return;
   saveSlideState();
+  rememberStateForUndo();
   const copy=JSON.parse(JSON.stringify(DATA[cur]));
   DATA.splice(cur+1,0,copy);
   buildThumbs();
@@ -651,6 +718,24 @@ function enhanceControlsLayout(){
   const moveLeft=document.getElementById('moveLeftBtn');
   const moveRight=document.getElementById('moveRightBtn');
   const editBtn=document.getElementById('editBtn');
+  let undoBtn=document.getElementById('undoBtn');
+  let redoBtn=document.getElementById('redoBtn');
+  if(!undoBtn){
+    undoBtn=document.createElement('button');
+    undoBtn.className='btn';
+    undoBtn.id='undoBtn';
+    undoBtn.textContent='Undo';
+    undoBtn.disabled=true;
+    undoBtn.onclick=undoChange;
+  }
+  if(!redoBtn){
+    redoBtn=document.createElement('button');
+    redoBtn.className='btn';
+    redoBtn.id='redoBtn';
+    redoBtn.textContent='Redo';
+    redoBtn.disabled=true;
+    redoBtn.onclick=redoChange;
+  }
   const dupBtn=document.getElementById('dupBtn');
   const saveBtn=document.getElementById('saveBtn');
   const slideBtn=document.getElementById('dlBtn');
@@ -658,7 +743,7 @@ function enhanceControlsLayout(){
   const spacer=row.querySelector('.spacer');
 
   [prevBtn,counter,nextBtn].forEach(el=>{ if(el) nav.appendChild(el); });
-  [moveLeft,moveRight,editBtn,dupBtn,saveBtn].forEach(el=>{ if(el) manage.appendChild(el); });
+  [moveLeft,moveRight,editBtn,undoBtn,redoBtn,dupBtn,saveBtn].forEach(el=>{ if(el) manage.appendChild(el); });
   [slideBtn,allBtn].forEach(el=>{ if(el) exportGroup.appendChild(el); });
   if(spacer) spacer.remove();
 
@@ -667,6 +752,7 @@ function enhanceControlsLayout(){
   row.appendChild(manage);
   row.appendChild(exportGroup);
   row.dataset.enhanced='1';
+  updateHistoryButtons();
 }
 
 function moveSlide(dir){
@@ -677,6 +763,7 @@ function moveSlide(dir){
     return;
   }
   saveSlideState();
+  rememberStateForUndo();
   const moved=DATA.splice(cur,1)[0];
   DATA.splice(target,0,moved);
   cur=target;
@@ -751,7 +838,7 @@ function handleFile(f){
     if(raw.startsWith('let DATA=')) raw = raw.replace(/^let DATA=\s*/i, '').replace(/;\s*$/i, '');
     try{
       let json; try { json = JSON.parse(raw); } catch(e) { json = new Function("return " + raw)(); }
-      if(Array.isArray(json)){ DATA=json; dz.style.display='none'; buildThumbs(); buildIconPicker(); render(0); }
+      if(Array.isArray(json)){ DATA=json; cur=0; UNDO_STACK=[]; REDO_STACK=[]; editSessionSnapshot=null; dz.style.display='none'; buildThumbs(); buildIconPicker(); render(0); updateHistoryButtons(); }
       else alert('Invalid format: File does not contain an array.');
     }catch(e){alert('Error processing file! AI might have malformed the code:\n'+e.message);}
   };
@@ -773,6 +860,20 @@ function buildThumbs(){
 }
 enhanceControlsLayout();
 buildIconPicker();
+document.addEventListener('keydown',e=>{
+  const mod=e.ctrlKey || e.metaKey;
+  if(!mod) return;
+  const target=e.target;
+  if(target && (target.isContentEditable || /^(input|textarea)$/i.test(target.tagName))) return;
+  const key=(e.key||'').toLowerCase();
+  if(key==='z' && !e.shiftKey){
+    e.preventDefault();
+    undoChange();
+  }else if((key==='y') || (key==='z' && e.shiftKey)){
+    e.preventDefault();
+    redoChange();
+  }
+});
 </script>
 </body>
 </html>
